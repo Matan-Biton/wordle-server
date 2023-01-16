@@ -1,21 +1,20 @@
 import express from "express";
 import cors from "cors";
 import bodyParser, { json, urlencoded } from "body-parser";
-import { checkWord, fetchRandomWord } from "./service";
+import { checkWord } from "./service";
 
 const app = express();
-const port = 3001;
+const port = 3333;
 
 app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/", (_, res) => {
-  res.json(fetchRandomWord());
+  res.json('I am up!');
 });
 
 app.post("/check_word", (req, res) => {
-  console.log(req.body);
-  res.json(checkWord(req.body.attempt));
+  res.json(checkWord(req.body));
 });
 
 app.listen(port, () => {

@@ -1,4 +1,4 @@
 export type charObj = {
     char: string;
-    status: 'bull' | 'cow' | 'missed' | '' 
+    status: 'bull' | 'cow' | 'missed' | '';
 }
