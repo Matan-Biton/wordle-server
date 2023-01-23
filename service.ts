@@ -10,13 +10,13 @@ export const checkWord = (attempt: string) => {
     }
   });
   console.log(attemptAsArray);
-  
+
   attemptAsArray.forEach((char, idx) => {
-    const indexOfSimilar = testAgainst.indexOf(char)
+    const indexOfSimilar = testAgainst.indexOf(char);
     if (indexOfSimilar !== -1) {
       attemptAsArray[idx] = "c";
-      testAgainst[indexOfSimilar] = ''
+      testAgainst[indexOfSimilar] = "";
     }
   });
-  return attemptAsArray.map((c) => ("bc".includes(c) ? c : "m"));
+  return attemptAsArray.map((c) => (c === "b" || c === "c" ? c : "m"));
 };
