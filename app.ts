@@ -13,8 +13,8 @@ app.get("/", (_, res) => {
   res.json('I am up!');
 });
 
-app.post("/check_word", (req, res) => {
-  res.json(checkWord(req.body));
+app.get("/:word", (req, res) => {
+  res.json(checkWord(req.params.word));
 });
 
 app.listen(port, () => {
