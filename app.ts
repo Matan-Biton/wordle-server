@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import bodyParser, { json, urlencoded } from "body-parser";
+import bodyParser from "body-parser";
 import { checkWord } from "./service";
 
 const app = express();
