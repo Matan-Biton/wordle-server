@@ -9,7 +9,6 @@ export const checkWord = (attempt: string) => {
       testAgainst[idx] = " ";
     }
   });
-  console.log(attemptAsArray);
 
   attemptAsArray.forEach((char, idx) => {
     const indexOfSimilar = testAgainst.indexOf(char);
