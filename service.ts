@@ -5,13 +5,15 @@ export const checkWord = (attempt: string) => {
   const attemptAsArray = attempt.split("");
   attemptAsArray.forEach((char, idx) => {
     if (char === testAgainst[idx]) {
-      char = "b";
+      attemptAsArray[idx] = "b";
       testAgainst[idx] = " ";
     }
   });
+  console.log(attemptAsArray);
+  
   attemptAsArray.forEach((char, idx) => {
     if (testAgainst.includes(char)) {
-      char = "c";
+      attemptAsArray[idx] = "c";
       testAgainst[idx] = " ";
     }
   });
