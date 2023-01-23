@@ -12,9 +12,10 @@ export const checkWord = (attempt: string) => {
   console.log(attemptAsArray);
   
   attemptAsArray.forEach((char, idx) => {
-    if (testAgainst.includes(char)) {
+    const indexOfSimilar = testAgainst.indexOf(char)
+    if (indexOfSimilar !== -1) {
       attemptAsArray[idx] = "c";
-      testAgainst[idx] = " ";
+      testAgainst[indexOfSimilar] = ''
     }
   });
   return attemptAsArray.map((c) => ("bc".includes(c) ? c : "m"));
