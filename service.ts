@@ -17,5 +17,5 @@ export const checkWord = (attempt: string) => {
       testAgainst[indexOfSimilar] = "";
     }
   });
-  return attemptAsArray.map((c) => (c === "b" || c === "c" ? c : "m"));
+  return attemptAsArray.map((c) => (c === "b" || c === "c" ? c : "m")).join('');
 };
