@@ -2,7 +2,6 @@ import { app } from "./app";
 import supertest from "supertest";
 import { it } from "mocha";
 import { wordsArray } from "./words";
-import { request } from "express";
 import { assert } from "chai";
 
 describe("GET /", () => {
